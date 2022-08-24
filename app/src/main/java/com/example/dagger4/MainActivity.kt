@@ -5,6 +5,7 @@ import android.os.Bundle
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+
     @Inject
     lateinit var car: Car
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,4 +17,12 @@ class MainActivity : AppCompatActivity() {
 //        car = component.getCar()
         car.drive()
     }
+
+    /*
+        dagger inject:
+            1-constructor
+            2-field
+            3-methods
+            in that order
+     */
 }
