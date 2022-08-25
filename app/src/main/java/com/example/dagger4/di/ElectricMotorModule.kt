@@ -2,12 +2,12 @@ package com.example.dagger4.di
 
 import com.example.dagger4.car.ElectricMotor
 import com.example.dagger4.car.Engine
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class ElectricMotorModule {
+class ElectricMotorModule constructor(private val horsePower:Int){
 
-@Binds
-abstract fun bindEngine(electricMotor: ElectricMotor):Engine
+    @Provides
+    fun provideEngine(): Engine = ElectricMotor(horsePower)
 }
