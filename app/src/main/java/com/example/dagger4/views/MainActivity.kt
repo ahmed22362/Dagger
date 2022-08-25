@@ -1,7 +1,10 @@
-package com.example.dagger4
+package com.example.dagger4.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.dagger4.R
+import com.example.dagger4.car.Car
+import com.example.dagger4.di.DaggerCarComponent
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         component.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        car = component.getCar()
         car.drive()
     }
 

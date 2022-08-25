@@ -1,4 +1,4 @@
-package com.example.dagger4.dont_have
+package com.example.dagger4.car.dont_have
 
 //let's say we don't own this class and it comes from 3rd party library
 

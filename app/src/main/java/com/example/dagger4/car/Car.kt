@@ -1,10 +1,10 @@
-package com.example.dagger4
+package com.example.dagger4.car
 
 import android.util.Log
-import com.example.dagger4.dont_have.Wheels
+import com.example.dagger4.car.dont_have.Wheels
 import javax.inject.Inject
 
-class Car @Inject constructor(val engine:Engine , val wheels: Wheels) {
+class Car @Inject constructor(val engine: Engine, val wheels: Wheels) {
 
     companion object{
         const val TAG = "TAG"
@@ -15,6 +15,7 @@ class Car @Inject constructor(val engine:Engine , val wheels: Wheels) {
     }
 
     fun drive(){
+        engine.start()
         Log.e("TAG","Vooooooo!!!")
     }
 
