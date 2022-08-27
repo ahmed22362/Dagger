@@ -1,11 +1,10 @@
 package com.example.dagger4.views
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dagger4.R
 import com.example.dagger4.car.Car
 import com.example.dagger4.di.DaggerCarComponent
-import com.example.dagger4.di.ElectricMotorModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -16,10 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         val component =
             DaggerCarComponent.builder()
-                .electricMotorModule(ElectricMotorModule(1000))
-                .build()
+                .horsePower(1300)
+                .cylinders(0)
+                .built()
 
         component.inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
